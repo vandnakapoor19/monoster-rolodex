@@ -22,6 +22,7 @@ class App extends Component {
     );
     return (
       <div className='App'>
+        <h1 >MONSTER ROLODEX</h1>
         <Search  searchEventHandler={e => this.setState({ seaechField: e.target.value })}
         />
         <CardList monsters={monsterData} />
