@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { CardList } from './components/card-list/';
+import { Search } from './components/search/';
 import './App.css';
 class App extends Component {
   constructor() {
@@ -21,11 +22,7 @@ class App extends Component {
     );
     return (
       <div className='App'>
-        <input
-          type='search'
-          name='searchField'
-          placeholder='SearchByKeyword'
-          onChange={e => this.setState({ seaechField: e.target.value })}
+        <Search  searchEventHandler={e => this.setState({ seaechField: e.target.value })}
         />
         <CardList monsters={monsterData} />
       </div>
